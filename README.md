@@ -4,7 +4,15 @@ Here we build out a simple game to demonstrate some code in hopefully a fun and 
 
 
 ## Tasks:
-- [ ] Test
+- [x] Setup React App with create react app and typescript
+- [x] Intro to react class and functional components
+- [x] Install and introduce emotionjs as styling library
+- [x] Install and introduce mobx concepts
+- [ ] Build out structure of our app
+- [ ] Build out components to make parts of our app with
+- [ ] Build start screen
+- [ ] Build gameplay loop and interface screen
+- [ ] Build leaderboard screen
 
 
 ## Video Recording Playlist
