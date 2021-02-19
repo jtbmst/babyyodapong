@@ -1,3 +1,17 @@
+
+# Example Walkthrough of creating a react app. 
+Here we build out a simple game to demonstrate some code in hopefully a fun and entertaining way.
+
+
+## Tasks:
+- [ ] Test
+
+
+## Video Recording Playlist
+[Playlist of videos so far](https://youtube.com/playlist?list=PLi07OKXXzudo0qZH-NjpBYZQt24pVWuDZ)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
