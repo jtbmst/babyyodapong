@@ -2,12 +2,11 @@ import * as React from 'react';
 import { observer } from "mobx-react";
 
 @observer
-class Button extends React.Component{
+export class Button extends React.Component{
 
   render(){
     return (
-      <div>
-      </div>
+      <button>Click Me</button>
     )
   }
 }

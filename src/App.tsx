@@ -1,6 +1,9 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import { css } from '@emotion/css';
+import { observable } from 'mobx';
+import { Start } from './pages/Start';
+
 
 interface AppProps{
 
@@ -19,10 +22,14 @@ export const App = observer((props:AppProps): JSX.Element => {
 @observer
 class GameFrame extends React.Component{
 
+  @observable currentPage = <Start />;
+
+  
+
   render(){
     return (
       <div className={S.frame()}>
-        FRAME
+        {this.currentPage}
       </div>
     )
   }
@@ -40,5 +47,6 @@ const S = {
     width: 500px;
     height:800px;
     background-color:#666;
+    position:relative;
   `
 }

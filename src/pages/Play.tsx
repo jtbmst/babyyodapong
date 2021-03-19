@@ -2,7 +2,7 @@ import * as React from 'react';
 import { observer } from "mobx-react";
 
 @observer
-class Play extends React.Component{
+export class Play extends React.Component{
 
   render(){
     return (

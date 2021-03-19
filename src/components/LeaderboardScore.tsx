@@ -2,7 +2,7 @@ import * as React from 'react';
 import { observer } from "mobx-react";
 
 @observer
-class LeaderboardScore extends React.Component{
+export class LeaderboardScore extends React.Component{
 
   render(){
     return (
