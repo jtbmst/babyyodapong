@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App initialCount={5}></App>
+    <App></App>
   </React.StrictMode>,
   document.getElementById('root')
 );
