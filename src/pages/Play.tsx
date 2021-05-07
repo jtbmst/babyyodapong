@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { observer } from "mobx-react";
+import { RenderStore } from '../RenderStore';
 
-@observer
-export class Play extends React.Component{
+
+export class Play extends RenderStore{
 
   render(){
     return (

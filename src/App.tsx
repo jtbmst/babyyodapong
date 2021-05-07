@@ -3,6 +3,8 @@ import { observer } from 'mobx-react';
 import { css } from '@emotion/css';
 import { observable } from 'mobx';
 import { Start } from './pages/Start';
+import { RenderStore } from './RenderStore';
+import { Play } from './pages/Play';
 
 
 interface AppProps{
@@ -11,25 +13,36 @@ interface AppProps{
 
 export const App = observer((props:AppProps): JSX.Element => {
 
+  const [ store ] = React.useState(new GameFrame())
+
 
   return (
     <div className={S.app()}>
-      <GameFrame />
+      <store.render />
     </div>
   );
 });
 
-@observer
-class GameFrame extends React.Component{
 
-  @observable currentPage = <Start />;
+class GameFrame extends RenderStore{
 
-  
+  @observable startPage = new Start();
+  @observable playPage = new Play();
+  @observable currentPage:RenderStore = this.startPage;
+
+  constructor(){
+    super();
+    window['GameFrameStore'] = this;
+
+    this.startPage.events.startWasClicked = ()=>{
+      this.currentPage = this.playPage;
+    }
+  }
 
   render(){
     return (
       <div className={S.frame()}>
-        {this.currentPage}
+        <this.currentPage.render />
       </div>
     )
   }
